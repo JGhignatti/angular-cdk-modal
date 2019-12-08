@@ -8,7 +8,7 @@ import {ModalPosition, ModalState, ModalType} from '../models';
 @Injectable({providedIn: 'root'})
 export class GenericModalService {
 
-  private state$ = new BehaviorSubject<ModalState>({open: false, position: undefined});
+  private state$ = new BehaviorSubject<ModalState>(undefined);
   private portal$ = new BehaviorSubject<TemplatePortal>(undefined);
   private type$ = new BehaviorSubject<ModalType>(undefined);
 
@@ -24,7 +24,7 @@ export class GenericModalService {
     return this.type$.asObservable();
   }
 
-  open(position: ModalPosition, type: ModalType) {
+  open(position: ModalPosition, type?: ModalType) {
     this.type$.next(type);
     this.state$.next({open: true, position});
   }

@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 
 import {HomeComponent} from './home/home.component';
+import {HomeModalComponent} from './home-modal/home-modal.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import {HomeComponent} from './home/home.component';
   ],
   declarations: [
     HomeComponent,
+    HomeModalComponent,
   ],
 })
 export class HomeModule {

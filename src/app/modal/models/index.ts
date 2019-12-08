@@ -9,7 +9,7 @@ export enum ModalPosition {
 }
 
 export enum ModalType {
-  HOME_1 = 'HOME_1',
-  HOME_2 = 'HOME_2',
-  SECONDARY = 'SECONDARY',
+  HOME = 'HOME',
+  SECONDARY_1 = 'SECONDARY_1',
+  SECONDARY_2 = 'SECONDARY_2',
 }
