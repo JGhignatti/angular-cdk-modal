@@ -12,8 +12,8 @@ import {GenericModalService} from '../../services/generic-modal.service';
 })
 export class GenericModalComponent implements OnInit {
 
-  @ViewChild('modal', {static: true}) modal: ModalDirective;
-  @ViewChild(CdkPortalOutlet, {static: true}) portalOutlet: PortalOutlet;
+  @ViewChild('modal', {static: false}) modal: ModalDirective;
+  @ViewChild(CdkPortalOutlet, {static: false}) portalOutlet: PortalOutlet;
 
   constructor(private genericModalService: GenericModalService) {
   }

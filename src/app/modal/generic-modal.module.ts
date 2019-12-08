@@ -10,12 +10,12 @@ import {GenericModalComponent} from './components/generic-modal/generic-modal.co
   imports: [
     CommonModule,
     PortalModule,
-    ModalModule,
-  ],
-  exports: [
-    GenericModalComponent,
+    ModalModule.forRoot(),
   ],
   declarations: [
+    GenericModalComponent,
+  ],
+  exports: [
     GenericModalComponent,
   ],
 })
