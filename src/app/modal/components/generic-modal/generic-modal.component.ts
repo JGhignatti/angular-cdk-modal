@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
 import {CdkPortalOutlet, PortalOutlet, TemplatePortal} from '@angular/cdk/portal';
 
 import {ModalDirective} from 'ngx-bootstrap';
@@ -27,13 +27,12 @@ export class GenericModalComponent implements OnInit {
     this.genericModalService.state
       .subscribe((state: ModalState) => {
         if (!!state) {
-          this.position = state.position;
-
           if (state.open) {
             this.modal.show();
           } else {
             this.modal.hide();
           }
+          this.position = state.position || this.position;
         }
       });
 
@@ -44,5 +43,19 @@ export class GenericModalComponent implements OnInit {
           this.portalOutlet.attach(portal);
         }
       });
+  }
+
+  @HostListener('mousedown', ['$event'])
+  onClick(event: any) {
+    if (event.target.classList.contains('modal')) {
+      this.genericModalService.close();
+    }
+  }
+
+  @HostListener('keydown', ['$event'])
+  onEsc(event: any) {
+    if (event.key === 'Escape') {
+      this.genericModalService.close();
+    }
   }
 }

@@ -16,7 +16,7 @@ export class GenericModalService {
     return this.state$.asObservable();
   }
 
-  get portal(): Observable<any> {
+  get portal(): Observable<TemplatePortal> {
     return this.portal$.asObservable();
   }
 
