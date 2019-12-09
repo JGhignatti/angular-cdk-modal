@@ -5,7 +5,14 @@ import {ModalPosition} from '../../../modal/models';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
+  template: `
+    <app-home-modal></app-home-modal>
+
+    <div>
+        <p>home works!</p>
+        <button class="btn btn-primary" (click)="openHomeModal()">Home modal</button>
+    </div>
+  `,
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {

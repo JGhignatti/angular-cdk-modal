@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 
 import {SecondaryComponent} from './secondary/secondary.component';
+import {SecondaryFirstModalComponent} from './secondary-first-modal/secondary-first-modal.component';
+import {SecondarySecondModalComponent} from './secondary-second-modal/secondary-second-modal.component';
 
 @NgModule({
   imports: [
@@ -13,6 +15,8 @@ import {SecondaryComponent} from './secondary/secondary.component';
   ],
   declarations: [
     SecondaryComponent,
+    SecondaryFirstModalComponent,
+    SecondarySecondModalComponent,
   ],
 })
 export class SecondaryModule {

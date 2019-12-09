@@ -1,12 +1,15 @@
 import {Component, OnInit, TemplateRef, ViewChild, ViewContainerRef} from '@angular/core';
+import {TemplatePortal} from '@angular/cdk/portal';
 
 import {GenericModalService} from '../../../modal/services/generic-modal.service';
-import {TemplatePortal} from '@angular/cdk/portal';
 
 @Component({
   selector: 'app-home-modal',
-  templateUrl: './home-modal.component.html',
-  styleUrls: ['./home-modal.component.scss']
+  template: `
+    <ng-template #modalTemplate>
+        <p>Home modal works!</p>
+    </ng-template>
+  `,
 })
 export class HomeModalComponent implements OnInit {
 

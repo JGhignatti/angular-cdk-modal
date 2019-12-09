@@ -1,0 +1,11 @@
+div {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > button:first-of-type {
+    margin-bottom: 10px;
+  }
+}
